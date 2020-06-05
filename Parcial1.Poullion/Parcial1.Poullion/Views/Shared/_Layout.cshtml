@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+@using Parcial1.Poullion.Models;
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -29,6 +31,24 @@
                     <div>
                         <h3> Contenido Relacionado</h3>
                     </div>
+                    <label for="Siglo">Siglo</label> <br />
+                    <input id="Siglo" name="Siglo" type="text" value="" />
+                    <br />
+                    <label for="Nombre">Nombre</label><br />
+                    <input id="Nombre" name="Nombre" type="text" value="" />
+                    <br />
+
+                    <div>
+                        <input type="submit" value="Create" /> 
+                    </div>
+
+                    <ul>
+                        @foreach (var item in GestorConstelacion.GetConstelaciones())
+                        {
+                            <li> Siglo: @item.Siglo - Nombre: @item.Nombre </li>
+
+                        }
+                    </ul>
 
                 </article>
 
