@@ -39,7 +39,7 @@
                     <br />
 
                     <div>
-                        <input type="submit" value="Create" /> 
+                        <input type="submit" value="Create" onclick="fnGrabar()" /> 
                     </div>
 
                     <ul>
@@ -59,7 +59,9 @@
 
         </div>
 
-  
+        @RenderSection("scripts", required:false)
+
+
     </div>
 
 
